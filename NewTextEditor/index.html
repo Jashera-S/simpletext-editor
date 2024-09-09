@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+     <div class="toolbar-1">
+        <button onclick="addtext()">Add Text</button>       
+         
+        <input type="number" id="fontsize" value="35" min="10"  onchange="updateTextStyle()"> 
+        <select id="fontstyle" onchange="updateFontStyle()">
+        <option value="Arial" selected>Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman ">Time New Roman</option>
+        <option value="Cambria">Cambria</option>
+        <option value="Georgia">Georgia</option>
+
+        </select>
+
+        <button onclick="togglebold()"><i class="fa-solid fa-bold"></i></button>
+        <button onclick="toggleitalic()"><i class="fa-solid fa-italic"></i></button>
+        <button onclick="toggleunderline()"><i class="fa-solid fa-underline"></i></button>
+        <button onclick="alignText('left')"><i class="fa-solid fa-align-left"></i></button>
+        <button onclick="alignText('right')"><i class="fa-solid fa-align-right"></i></button>
+        <button onclick="alignText('center')"><i class="fa-solid fa-align-center"></i></button>
+     </div>    
+     <div class="canvas" id="canvas"></div>
+     <div class="toolbar-2">
+          <button onclick="undo()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+          <button onclick="redo()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+     </div>
+     <script src="script.js"></script>
+</body>
+</html>
